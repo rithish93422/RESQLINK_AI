@@ -3,11 +3,11 @@ import Hero from "../components/Hero";
 import FeatureCard from "../components/FeatureCard";
 import Footer from "../components/Footer";
 
-function Home() {
+function Home({ onLogin }) {
   return (
     <>
-      <Navbar />
-      <Hero />
+      <Navbar onLogin={onLogin} />
+      <Hero onLogin={onLogin} />
       <FeatureCard />
       <Footer />
     </>

@@ -1,33 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Home from "./pages/Home";
 import Login from "./pages/Login";
-
-import "./styles/global.css";
-
-function Home() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-    </>
-  );
-}
+import Emergency from "./Emergency";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-
-        {/* Home Page */}
-        <Route path="/" element={<Home />} />
-
-        {/* Login Page */}
-        <Route path="/login" element={<Login />} />
-
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/emergency" element={<Emergency />} />
+    </Routes>
   );
 }
 

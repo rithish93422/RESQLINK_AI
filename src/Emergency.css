@@ -1,0 +1,173 @@
+.emergency-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+  padding: 20px;
+}
+
+.emergency-card {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 24px;
+  padding: 50px 35px;
+  text-align: center;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+.sos-icon {
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+
+.emergency-card h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.emergency-description {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.sos-button {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border: none;
+  border-radius: 14px;
+  background: #d90429;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sos-button:hover {
+  transform: scale(1.03);
+  background: #b80322;
+}
+
+.warning-text {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #777;
+}
+
+.confirmation-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.confirmation-box {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  text-align: center;
+}
+
+.confirm-icon {
+  font-size: 50px;
+}
+
+.confirmation-box h2 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.confirmation-box p {
+  color: #444;
+  line-height: 1.5;
+}
+
+.small-text {
+  font-size: 13px;
+  color: #777 !important;
+}
+
+.confirmation-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.cancel-button,
+.confirm-button {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background: #eee;
+  border: none;
+}
+
+.confirm-button {
+  background: #d90429;
+  color: white;
+  border: none;
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  border-radius: 50%;
+  background: #22c55e;
+  color: white;
+  font-size: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analysis-box {
+  background: #f5f7fb;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+  margin: 25px 0;
+}
+
+.analysis-box p {
+  margin: 12px 0;
+}
+
+.status-text {
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .emergency-card {
+    padding: 35px 20px;
+  }
+
+  .emergency-card h1 {
+    font-size: 27px;
+  }
+
+  .sos-button {
+    font-size: 17px;
+  }
+
+  .confirmation-buttons {
+    flex-direction: column;
+  }
+}

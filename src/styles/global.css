@@ -537,3 +537,20 @@ body {
     }
 
 }
+.back-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 1px solid rgba(78, 168, 255, 0.3);
+  border-radius: 10px;
+  background: transparent;
+  color: #AFC0D8;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  color: white;
+  border-color: #3B82F6;
+  background: rgba(37, 99, 235, 0.1);
+}

@@ -1,9 +1,15 @@
 import { FaShieldAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/emergency");
+  };
+
   return (
     <div className="login-page">
-
       <div className="login-card">
 
         <div className="login-logo">
@@ -17,32 +23,45 @@ function Login() {
           Sign in to continue to ResQLink AI
         </p>
 
-        <form>
+        <div className="login-form">
 
           <label>Email</label>
+
           <input
             type="email"
             placeholder="Enter your email"
           />
 
           <label>Password</label>
+
           <input
             type="password"
             placeholder="Enter your password"
           />
 
-          <button type="submit" className="login-submit">
+          <button
+            type="button"
+            className="login-submit"
+            onClick={handleLogin}
+          >
             Login
           </button>
 
-        </form>
+        </div>
+
+        <button
+          type="button"
+          className="back-button"
+          onClick={() => navigate("/")}
+        >
+          ← Back
+        </button>
 
         <p className="login-footer">
           ResQLink AI • Emergency Communication Platform
         </p>
 
       </div>
-
     </div>
   );
 }
