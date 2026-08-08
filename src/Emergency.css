@@ -3,168 +3,229 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f5f7fb;
-  padding: 20px;
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.20), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.15), transparent 30%),
+    #08111F;
+
+  color: white;
 }
 
 .emergency-card {
   width: 100%;
-  max-width: 600px;
-  background: white;
+  max-width: 620px;
+  padding: 50px 40px;
+
+  background: rgba(15, 29, 50, 0.88);
+  border: 1px solid rgba(78, 168, 255, 0.20);
   border-radius: 24px;
-  padding: 50px 35px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(37, 99, 235, 0.10);
+
   text-align: center;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
 }
 
 .sos-icon {
-  font-size: 70px;
-  margin-bottom: 15px;
+  font-size: 68px;
+  margin-bottom: 18px;
 }
 
 .emergency-card h1 {
-  font-size: 34px;
-  margin-bottom: 15px;
+  font-size: 38px;
+  margin-bottom: 16px;
   font-weight: 800;
 }
 
 .emergency-description {
-  font-size: 17px;
-  color: #555;
-  line-height: 1.6;
+  color: #C5D0E2;
+  font-size: 18px;
+  line-height: 1.7;
   margin-bottom: 35px;
 }
 
 .sos-button {
   width: 100%;
-  max-width: 400px;
-  padding: 20px;
+  max-width: 420px;
+  padding: 18px;
+
   border: none;
   border-radius: 14px;
-  background: #d90429;
+
+  background: linear-gradient(135deg, #2563EB, #3B82F6);
   color: white;
+
   font-size: 20px;
   font-weight: 800;
+
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
+
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
 }
 
 .sos-button:hover {
-  transform: scale(1.03);
-  background: #b80322;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.55);
 }
 
 .warning-text {
   margin-top: 18px;
+  color: #8FA3BF;
   font-size: 13px;
-  color: #777;
 }
+
+/* CONFIRMATION OVERLAY */
 
 .confirmation-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+
+  background: rgba(2, 8, 18, 0.85);
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 20px;
   z-index: 1000;
 }
 
 .confirmation-box {
   width: 100%;
-  max-width: 450px;
-  background: white;
-  border-radius: 20px;
-  padding: 35px;
+  max-width: 460px;
+
+  padding: 38px;
+
+  background: #0F1D32;
+  border: 1px solid rgba(78, 168, 255, 0.25);
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(37, 99, 235, 0.12);
+
   text-align: center;
 }
 
 .confirm-icon {
-  font-size: 50px;
+  font-size: 48px;
+  margin-bottom: 12px;
 }
 
 .confirmation-box h2 {
-  font-size: 28px;
-  font-weight: 800;
+  font-size: 30px;
+  margin-bottom: 14px;
 }
 
 .confirmation-box p {
-  color: #444;
-  line-height: 1.5;
+  color: #C5D0E2;
+  line-height: 1.6;
 }
 
 .small-text {
-  font-size: 13px;
-  color: #777 !important;
+  color: #8FA3BF !important;
+  font-size: 14px;
 }
+
+/* BUTTONS */
 
 .confirmation-buttons {
   display: flex;
-  gap: 12px;
-  margin-top: 25px;
+  gap: 14px;
+  margin-top: 28px;
 }
 
 .cancel-button,
 .confirm-button {
   flex: 1;
   padding: 14px;
-  border-radius: 10px;
+
+  border-radius: 11px;
   font-weight: 800;
+
   cursor: pointer;
 }
 
 .cancel-button {
-  background: #eee;
-  border: none;
+  background: transparent;
+  color: #C5D0E2;
+
+  border: 1px solid rgba(120, 160, 210, 0.30);
+}
+
+.cancel-button:hover {
+  border-color: #3B82F6;
+  color: white;
 }
 
 .confirm-button {
-  background: #d90429;
-  color: white;
   border: none;
+
+  background: linear-gradient(135deg, #2563EB, #3B82F6);
+  color: white;
+
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.30);
 }
 
+/* CONFIRMED PAGE */
+
 .success-icon {
-  width: 70px;
-  height: 70px;
-  margin: auto;
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 18px;
+
   border-radius: 50%;
-  background: #22c55e;
+
+  background: #22C55E;
   color: white;
-  font-size: 45px;
+
+  font-size: 44px;
+
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .analysis-box {
-  background: #f5f7fb;
-  border-radius: 15px;
-  padding: 20px;
+  margin: 28px 0;
+  padding: 24px;
+
+  background: rgba(5, 15, 30, 0.65);
+
+  border: 1px solid rgba(78, 168, 255, 0.18);
+  border-radius: 16px;
+
   text-align: left;
-  margin: 25px 0;
 }
 
 .analysis-box p {
-  margin: 12px 0;
+  margin: 14px 0;
+  color: #C5D0E2;
 }
 
 .status-text {
+  color: #4EA8FF;
   font-weight: 700;
 }
 
+/* MOBILE */
+
 @media (max-width: 600px) {
   .emergency-card {
-    padding: 35px 20px;
+    padding: 38px 24px;
   }
 
   .emergency-card h1 {
-    font-size: 27px;
+    font-size: 30px;
   }
 
-  .sos-button {
-    font-size: 17px;
+  .confirmation-box {
+    padding: 30px 24px;
   }
 
   .confirmation-buttons {

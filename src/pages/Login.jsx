@@ -4,7 +4,11 @@ import { useNavigate } from "react-router-dom";
 function Login() {
   const navigate = useNavigate();
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // For now, this is a demo login.
+    // Later we can connect real authentication.
     navigate("/emergency");
   };
 
@@ -23,13 +27,14 @@ function Login() {
           Sign in to continue to ResQLink AI
         </p>
 
-        <div className="login-form">
+        <form onSubmit={handleLogin}>
 
           <label>Email</label>
 
           <input
             type="email"
             placeholder="Enter your email"
+            required
           />
 
           <label>Password</label>
@@ -37,25 +42,17 @@ function Login() {
           <input
             type="password"
             placeholder="Enter your password"
+            required
           />
 
           <button
-            type="button"
+            type="submit"
             className="login-submit"
-            onClick={handleLogin}
           >
             Login
           </button>
 
-        </div>
-
-        <button
-          type="button"
-          className="back-button"
-          onClick={() => navigate("/")}
-        >
-          ← Back
-        </button>
+        </form>
 
         <p className="login-footer">
           ResQLink AI • Emergency Communication Platform
