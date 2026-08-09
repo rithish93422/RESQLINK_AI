@@ -6,9 +6,6 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-
-    // For now, this is a demo login.
-    // Later we can connect real authentication.
     navigate("/emergency");
   };
 
@@ -30,7 +27,6 @@ function Login() {
         <form onSubmit={handleLogin}>
 
           <label>Email</label>
-
           <input
             type="email"
             placeholder="Enter your email"
@@ -38,17 +34,13 @@ function Login() {
           />
 
           <label>Password</label>
-
           <input
             type="password"
             placeholder="Enter your password"
             required
           />
 
-          <button
-            type="submit"
-            className="login-submit"
-          >
+          <button type="submit" className="login-submit">
             Login
           </button>
 
